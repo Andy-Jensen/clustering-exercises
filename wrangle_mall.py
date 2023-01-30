@@ -92,9 +92,9 @@ def remove_outliers(df, k=1.5, number=8):
     return df, var_fences
 
 
-def scale_mall(df)
+def scale_mall(df):
     ss=sklearn.preprocessing.StandardScaler()
     num_cols=['age', 'annual_income', 'spending_score']
     ss.fit(df[num_cols])
     df[num_cols]=ss.transform(df[num_cols])
-    return scaleddf
+    return df
